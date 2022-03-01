@@ -1,0 +1,12 @@
+.cell{
+    border: 5px solid black;
+    min-width: 20px;
+    min-height: 20px;
+    display: inline-block;
+    margin-right: 2px;
+    flex-direction: row;
+}
+
+.cell:hover{
+    background-color: blue;
+}
