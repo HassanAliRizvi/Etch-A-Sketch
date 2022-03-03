@@ -1,7 +1,7 @@
 //setting important vars for the grid
 const container = document.getElementById("container");
 let rows = document.getElementsByClassName("gridRow");
-let cells = document.getElementsByClassName("cells");
+let cells = document.getElementsByClassName("cell");
 
 //calling the makeGrid function
 //making the 16x16 grid
@@ -31,4 +31,6 @@ function makeGrid(table_row, table_col){
     }
    
 }
+
+
 

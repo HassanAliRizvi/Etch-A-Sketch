@@ -1,12 +1,21 @@
 .cell{
-    border: 5px solid black;
+    border: 1px solid black;
     min-width: 20px;
     min-height: 20px;
     display: inline-block;
-    margin-right: 2px;
-    flex-direction: row;
+    margin:0px;
+    padding: 0px
 }
 
 .cell:hover{
     background-color: blue;
+}
+
+#cotainer{
+    padding: 0px;
+    margin: 0px;
+}
+
+.gridRow{
+    margin-bottom:0px;
 }
