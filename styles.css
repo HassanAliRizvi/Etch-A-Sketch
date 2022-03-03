@@ -11,11 +11,13 @@
     background-color: blue;
 }
 
-#cotainer{
-    padding: 0px;
-    margin: 0px;
+#container{
+    margin: 20px auto auto auto;
+    width: 50%;
+    justify-content: center;
 }
 
 .gridRow{
-    margin-bottom:0px;
+    
+    display: flex;
 }
