@@ -1,7 +1,6 @@
 //setting important vars for the grid
 const container = document.getElementById("container");
 let rows = document.getElementsByClassName("gridRow");
-let cells = document.getElementsByClassName("cell");
 
 //calling the makeGrid function
 //making the 16x16 grid
@@ -19,6 +18,8 @@ function makeGrid(table_row, table_col){
         container.appendChild(row).className = "gridRow";
     }
 
+
+
     //----------------------------------------------------
     //makes columns of the grid
     //initialized j and i as the counter
@@ -33,4 +34,12 @@ function makeGrid(table_row, table_col){
 }
 
 
+//TO-DO: Pixaleted Hover effect!
+//Then move on to the color change part
+//Afetr that add user functionality
+//UPDATE: added pixel hover
+let cells = document.querySelectorAll(".cell");
 
+cells.forEach((cell) => {
+    cell.addEventListener("mouseover", e => e.target.classList.add('my-color-class'))
+})

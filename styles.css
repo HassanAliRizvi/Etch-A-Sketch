@@ -1,4 +1,4 @@
-.cell{
+.cell {
     border: 1px solid black;
     min-width: 20px;
     min-height: 20px;
@@ -7,17 +7,18 @@
     padding: 0px
 }
 
-.cell:hover{
-    background-color: blue;
-}
 
-#container{
+
+#container {
     margin: 20px auto auto auto;
     width: 50%;
     justify-content: center;
 }
 
-.gridRow{
-    
+.gridRow {
     display: flex;
+}
+
+.my-color-class {
+    background-color: blue;
 }
