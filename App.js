@@ -1,14 +1,34 @@
+//TO DO: Add button that clears the grid to make a new grid
+//therefore, I need to call the button which can be passed into the 
+//make grid function
 //setting important vars for the grid
 const container = document.getElementById("container");
 let rows = document.getElementsByClassName("gridRow");
 
+
+function clearGrid(){
+    gridPrompt();
+}
+
 //calling the makeGrid function
 //making the 16x16 grid
-makeGrid(16,16)
+
+function gridPrompt(){
+    let gridSize = window.prompt("Please enter a valid grid size between 0-100: ");
+    if(gridSize < 100){
+        makeGrid(gridSize,gridSize)
+    }
+    else{
+            do{
+                sizeGrid = window.prompt("Invalid! Please enter a valid grid size between 0-100: ")
+                makeGrid(sizeGrid,sizeGrid)
+            }
+            while(sizeGrid>100)
+    }
+}
 
 //makeGrid function to create the table
 function makeGrid(table_row, table_col){
-    
     //----------------------------------------------------
     //makes rows of the grid
     //initialized i as the counter
@@ -17,8 +37,6 @@ function makeGrid(table_row, table_col){
         let row = document.createElement("div");
         container.appendChild(row).className = "gridRow";
     }
-
-
 
     //----------------------------------------------------
     //makes columns of the grid
@@ -33,10 +51,10 @@ function makeGrid(table_row, table_col){
    
 }
 
-
+gridPrompt();
 //TO-DO: Pixaleted Hover effect!
 //Then move on to the color change part
-//Afetr that add user functionality
+//After that add user functionality
 //UPDATE: added pixel hover
 let cells = document.querySelectorAll(".cell");
 
