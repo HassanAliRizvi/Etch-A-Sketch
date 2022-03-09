@@ -7,6 +7,7 @@ let rows = document.getElementsByClassName("gridRow");
 
 
 function clearGrid(){
+    rows.style.display = 'none';
     gridPrompt();
 }
 
@@ -48,16 +49,17 @@ function makeGrid(table_row, table_col){
         }
 
     }
+    //TO-DO: Pixaleted Hover effect!
+    //Then move on to the color change part
+    //After that add user functionality
+    //UPDATE: added pixel hover
+    let cells = document.querySelectorAll(".cell");
+
+    cells.forEach((cell) => {
+        cell.addEventListener("mouseover", e => e.target.classList.add('my-color-class'))
+    })
    
 }
 
 gridPrompt();
-//TO-DO: Pixaleted Hover effect!
-//Then move on to the color change part
-//After that add user functionality
-//UPDATE: added pixel hover
-let cells = document.querySelectorAll(".cell");
 
-cells.forEach((cell) => {
-    cell.addEventListener("mouseover", e => e.target.classList.add('my-color-class'))
-})
