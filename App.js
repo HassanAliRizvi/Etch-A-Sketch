@@ -3,13 +3,8 @@
 //make grid function
 //setting important vars for the grid
 const container = document.getElementById("container");
-let rows = document.getElementsByClassName("gridRow");
+const rows = document.getElementsByClassName("gridRow");
 
-
-function clearGrid(){
-    rows.style.display = 'none';
-    gridPrompt();
-}
 
 //calling the makeGrid function
 //making the 16x16 grid
@@ -59,6 +54,10 @@ function makeGrid(table_row, table_col){
         cell.addEventListener("mouseover", e => e.target.classList.add('my-color-class'))
     })
    
+}
+
+function clearGrid(){
+    window.location.reload();
 }
 
 gridPrompt();
